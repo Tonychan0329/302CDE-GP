@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row" style="margin: 10%;">
+        <div class="col-4" style="margin-top: 10%;">
+            <div class="dropdown" style="margin: 2%;">
+                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                  Setting
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/setting">Change Password</a>
+                  <a class="dropdown-item" href="/user_information">User Information</a>
+                </div>
+            </div>
+            <div style="margin: 2%;">
+                <a href="/user"><button type="button" class="btn btn-light">
+                    Order record
+                </button></a>
+            </div>
+            <div style="margin: 2%;">
+                <a href="/inqirty"><button type="button" class="btn btn-light">
+                    Inqirty
+                </button></a> 
+            </div>
+        </div>
+        <div class="col-8">
+            <h2>Inqirty</h2>
+            <p class="text-success">{{msg}}</p>
+            <p class="text-danger">{{error}}</p>
+            <hr>
+            <div class="container">
+                <form action="http://127.0.0.1:5000/inqirty" method="POST" >
+                    <div class="form-group">
+                        <label for="opass">Name:</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="opass">Email:</label>
+                        <input type="Email" class="form-control" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="opass">Question:</label>
+                        <input type="text" class="form-control" name="question" id="question">
+                    </div>
+                    <div>
+                        <button class="btn btn-success" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

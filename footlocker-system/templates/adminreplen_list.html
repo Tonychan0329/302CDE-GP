@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/adminhome.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% extends 'admin_layout.html' %}
+{% block title %}Warehouse List{% endblock %}
+{% block body %}
+
+	<section class="warehouse">
+		<div class="container">
+			<div class="col-md-12">
+				<h1>Warehouse List</h1>
+				<br>
+				<a href="/adminwarehouse" class="btn btn-outline-dark">Back</a>
+			</div>	
+			<div class="col-md-8 offset-md-3 form">
+                <div class="form-group">
+					<input id="myInput" style="width: 400px" class="form-control mr-sm-2" type="text" placeholder="Search" autocomplete="off" autofocus>
+				</div>
+            </br>
+			</div>
+			
+				<div class="col-md-12">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr style="color: #919191a4;">
+                                <th>Replenishment ID</th>
+								<th>Item</th>
+								<th>Item Type</th>
+								<th>Stock</th>
+								<th>Status</th>
+                                <th></th>
+							</tr>
+						</thead>
+						{% for row in data%}
+						<tbody id="myTable">
+							<tr>
+								<td>{{row[0]}}</td>
+								<td>{{row[1]}}</td>
+								<td>{{row[2]}}</td>
+								<td>{{row[3]}}</td>
+								<td class="text-success">
+									{{row[5]}}
+									<!---<form action="/update_status?replen_id={{row[0]}}" method="post">
+										<input type="text" value="{{row[5]}}" id="status" name="status">
+										<button type="submit" class="btn btn-warning">Update</button>
+									</form>--->
+								</td>
+                                <td>
+                                    <a href="/deletereplen?replen_id={{row[0]}}"><button class="btn btn-danger">Delete</button></a>
+                                </td>
+							</tr>
+						</tbody>
+						{% endfor %}
+					</table>
+				</div>
+		</div>
+	</section>
+<script>
+	$(document).ready(function(){
+		$("#myInput").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable tr").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+		});
+	});
+</script>
+
+{% endblock %}

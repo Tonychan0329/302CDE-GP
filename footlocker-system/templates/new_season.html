@@ -1,0 +1,41 @@
+<style>
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container{
+        margin: 5%;
+    }
+</style>
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <h2>New Season Item</h2>
+    <hr>
+    <div class="row">
+        {% for row in detail %}
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{url_for('static', filename='images/' + row[5])}}" alt="" style="width: 150px;">
+                </div>
+                <div class="card-body">
+                    <p>{{row[2]}}</p>
+                    <p>${{row[3]}}</p>
+                </div> 
+                {% if not session['loggedin'] %}
+                <div class="card-footer">
+                    <a href="/login" class="btn btn-info">Order</a>
+                </div>
+                {% else %}
+                <div class="card-footer">
+                    <a href="/product?productId={{row[0]}}" class="btn btn-info">Order</a>
+                </div>
+                {% endif %}
+            </div>  
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

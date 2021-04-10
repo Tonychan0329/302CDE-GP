@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='js/language.js')}}"></script>
+
+    <title>FootLocker</title>
+
+    
+</head>
+<body>
+    {% include 'includes/navbar.html' %}
+        {% block body %} {% endblock %}
+
+    <hr>
+    <div class="footer" id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5">
+                    <i class="fab fa-facebook" style="margin: 2%;"></i>Facebook
+                    <i class="fab fa-instagram" style="margin: 2%;"></i>Instagram
+                    <i class="fab fa-whatsapp" style="margin: 2%;"></i>Whatsapp
+                </div>
+                <div class="col-2"></div>
+                <div class="col-3">
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <i class="fas fa-phone mt-4 fa-1x"><p>+ 01 234 567 89</p></i>  
+                            
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope-open"><p>contact@mdbootstrap.com</p></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <p>Payment Method</p>
+                    <i class="fab fa-cc-visa mt-4 fa-2x"></i>
+                    <i class="fab fa-cc-apple-pay mt-4 fa-2x"></i>
+                    <i class="fab fa-cc-paypal mt-4 fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

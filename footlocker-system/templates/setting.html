@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row" style="margin: 10%;">
+        <div class="col-4" style="margin-top: 10%;">
+            <div class="dropdown" style="margin: 2%;">
+                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                  Setting
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/setting">Change Password</a>
+                  <a class="dropdown-item" href="/user_information">User Information</a>
+                </div>
+            </div>
+            <div style="margin: 2%;">
+                <a href="/user"><button type="button" class="btn btn-light">
+                    Order record
+                </button></a>
+            </div>
+            <div style="margin: 2%;">
+                <a href="/inqirty"><button type="button" class="btn btn-light">
+                    Inqirty
+                </button></a> 
+            </div>
+        </div>
+        <div class="col-8">
+            <!--JS-->
+            <script src={{url_for('static', filename='js/changepassword.js')}}></script>
+            <!--Body-->
+            <h2>Change Password</h2>
+            <div class="text-center text-info">{{ msg }}</div>
+            <hr>
+            <div class="container">
+                <form action="http://127.0.0.1:5000/setting" method="POST" onsubmit="return changevalidate()">
+                    <div class="form-group">
+                        <label for="opass">Old Password:</label>
+                        <input type="password" class="form-control" name="oldpassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="opass">New Password:</label>
+                        <input type="password" class="form-control" name="newpassword" id="newpassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="opass">Confirm Password:</label>
+                        <input type="password" class="form-control" name="cpassword" id="cpassword">
+                    </div>
+                    <div>
+                        <button class="btn btn-success" type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

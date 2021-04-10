@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row" style="margin: 10%;">
+        <div class="col-4" style="margin-top: 10%;">
+            <div class="dropdown" style="margin: 2%;">
+                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                  Setting
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/setting">Change Password</a>
+                  <a class="dropdown-item" href="/user_information">User Information</a>
+                </div>
+            </div>
+            <div style="margin: 2%;">
+                <a href="/user"><button type="button" class="btn btn-light">
+                    Order record
+                </button></a>
+            </div>
+            <div style="margin: 2%;">
+                <a href="/inqirty"><button type="button" class="btn btn-light">
+                    Inqirty
+                </button></a> 
+            </div>
+        </div>
+        <div class="col-8">
+            <h2>Order Record</h2>
+            <hr>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Order Number</th>
+                    <th>Total Price</th>
+                    <th>Order Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                {% for row in detail %}
+                <tbody>
+                  <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[4]}}</td>
+                    <td><a href="/detail?invoice={{row[0]}}" class="btn btn-outline-secondary">Details</a></td>
+                    <td>
+                      <a href="/delete_user_record?order_id={{row[0]}}"><button class="btn btn-danger">Delete</button></a>
+                    </td>
+                  </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

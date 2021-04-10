@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/adminhome.css') }}">
+{% extends 'admin_layout.html' %}
+{% block title %}Admin Management System{% endblock %}
+{% block body %}
+	<section class="home">
+		<div class="msg">
+            <div class="row">
+                <div class="col-md-10">
+                    <h1 style="font-size: 37px">{{msg}} Wellcom Back</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="function">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="outer">
+                        <div class="upper">
+                            <img src="static/images/user.png">
+                        </div>
+                        <div class="lower">
+                            <button class="btn-user"><a href="/adminuser">User Account</a></button>
+                        </div>
+                    </div>
+
+                    <div class="outer">
+                        <div class="upper">
+                            <img src="static/images/order.png">
+                        </div>
+                        <div class="lower">
+                            <button class="btn-user"><a href="/adminorder">Order</a></button>
+                        </div>
+                    </div>
+
+                    <div class="outer">
+                        <div class="upper">
+                            <img src="static/images/product.png">
+                        </div>
+                        <div class="lower">
+                            <button class="btn-user"><a href="/adminproduct">Product</a></button>
+                        </div>
+                    </div>
+
+                    <div class="outer">
+                        <div class="upper">
+                            <img src="static/images/warehouse.png">
+                        </div>
+                        <div class="lower">
+                            <button class="btn-user"><a href="/adminwarehouse">Warehouse</a></button>
+                        </div>
+                    </div>
+
+                </div>	
+            </div>	
+        </div>
+
+	</section>
+{% endblock %}	

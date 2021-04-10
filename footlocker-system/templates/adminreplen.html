@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/adminadd.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'admin_layout.html' %}
+{% block title %}Replenishment{% endblock %}
+{% block body %}
+	<section class="replen">
+		<div class="container">
+			<div class="col-md-10">
+                <a href="/adminwarehouse"><i class="far fa-arrow-alt-circle-left fa-3x"></a></i>
+				<h1 class="text-center">Replenishment</h1>
+                <br>
+                <br>
+			</div>	
+			<div class="col-md-8 offset-md-3 form">
+                
+                <form action=http://127.0.0.1:5000/adminreplen_submit method="POST">
+                    <div class="form-group">
+                        <label>Shop:</label>
+                        <input class="form-control" id="shop" name="shop" placeholder="Please entry your shop name!" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Item Name:</label>
+                        <input class="form-control"  id="item_name" name="item_name" value="{{data[1]}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Item Type:</label>
+                        <input class="form-control"  id="item_type" name="item_type" value="{{data[2]}}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Stock:</label>
+                        <input class="form-control"  id="stock" name="stock" placeholder="Please entry how much goods you need!" required>
+                    </div>
+                    <button class="btn btn-sub" type="submit">Submit</button>
+                </form>
+            </div>
+		</div>
+	</section>
+{% endblock %}	

@@ -1,0 +1,56 @@
+.addproduct{
+    position: relative;
+    margin-left: 200px;
+    height: 100%;
+    margin: 80px 100px auto;
+    
+}
+
+.addproduct i{
+    color: black;
+}
+
+.addproduct i h1{
+    text-align: center;
+    display: inline;
+    margin: 100px 200px auto;
+}
+
+.addproduct .btn-sub{
+    background-color: #000000a4;
+    color: white;
+}
+
+.addproduct input{
+    width: 500px;
+}
+
+
+/*    replen page    */
+
+.replen{
+    position: relative;
+    margin-left: 200px;
+    height: 100%;
+    margin: 80px 100px auto;
+    
+}
+
+.replen i{
+    color: black;
+}
+
+.replen i h1{
+    text-align: center;
+    display: inline;
+    margin: 100px 200px auto;
+}
+
+.replen .btn-sub{
+    background-color: #000000a4;
+    color: white;
+}
+
+.replen input{
+    width: 500px;
+}

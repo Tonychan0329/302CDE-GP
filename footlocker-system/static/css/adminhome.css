@@ -1,0 +1,98 @@
+.home{
+    position: relative;
+    margin-left: 200px;
+    height: 100%;
+}
+
+.home h1{
+    font-size: 60px;
+    color: #919191a4;
+}
+
+.function{
+    margin: 50px auto auto;
+}
+
+.function .outer{
+    display: inline-block;
+    border: 1px solid #919191a4;
+    width: 250px;
+    height: 300px;
+}
+
+.outer img {
+    width: 230px;
+    margin-right: 20px;
+    margin-left: 10px;
+    position: relative;
+	overflow: hidden;
+    opacity: 1;
+    padding: 10px;
+	text-decoration: none;
+}
+
+.outer button{
+    background-color: #919191a4;
+    height: 78px;
+	width: 248px;
+}
+
+.outer button a{
+    color: white;
+}
+
+.user h1{
+    color: #919191a4;
+}
+
+.user .btn-search{
+    background-color: #000000a4;
+    color: white;
+}
+
+.order h1{
+    color: #919191a4;
+}
+
+.order .btn-search{
+    background-color: #000000a4;
+    color: white;
+}
+
+.product h1{
+    color: #919191a4;
+}
+
+.product .btn-search,
+.product .btn-add{
+    background-color: #000000a4;
+    color: white;
+}
+
+.product .btn-add a{
+    color: white;
+}
+
+.product .btn-add{
+    float: right;
+    margin: auto 53px auto;
+}
+
+.warehouse h1{
+    color: #919191a4;
+}
+
+.warehouse .btn-search,
+.warehouse .btn-replen{
+    background-color: #000000a4;
+    color: white;
+}
+
+.warehouse .btn-replen a{
+    color: white;
+}
+
+.warehouse .btn-replen{
+    float: right;
+    margin: auto 45px auto;
+}

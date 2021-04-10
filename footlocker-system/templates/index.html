@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="{{url_for('static',  filename='css/index.css')}}">
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="bg-1">
+        <img src="{{url_for('static', filename='images/bg-1.jpg')}}" alt="bg" class="center" style="width: 500px;">
+    </div>
+        
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card bg-light text-dark" style="width: 300px;">
+
+                <div class="card-body">
+                    <img src="{{url_for('static', filename='images/hm-1.png')}}" alt="pd-1" style="width: 150px;">
+                </div> 
+                <div class="card-footer">
+                    <a href="/men" class="btn btn-primary">Men</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-light text-dark" style="width: 300px;">
+                <div class="card-body">
+                    <img src="{{url_for('static', filename='images/hm-2.png')}}" alt="pd-2" style="width: 150px;">
+                </div> 
+                <div class="card-footer">
+                    <a href="/women" class="btn btn-primary">Women</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-light text-dark" style="width: 300px;">
+                <div class="card-body">
+                    <img src="{{url_for('static', filename='images/hm-3.png')}}" alt="pd-3" style="width: 150px; ">
+                </div> 
+                <div class="card-footer">
+                    <a href="/kids" class="btn btn-primary">Kids</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

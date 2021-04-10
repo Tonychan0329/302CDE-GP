@@ -1,0 +1,85 @@
+
+p,a{
+	font-size: 20px;
+}
+
+header{
+	background-color: #AFEEEE;
+}
+
+header nav img{
+	width: 130px;
+}
+
+header li{
+	font-size: 23px;
+	margin: 0 20px;
+}
+
+#signup{
+	max-width: 1000px;
+	float: none;
+	margin: 150px auto;
+}
+
+#signup h3{
+	font-size: 40px;
+	line-height: 1;
+	margin-bottom: 30px;
+}
+
+#signup button{
+	font-size: 20px;
+	background: #AAAAAA;
+	color: #FFFFFF;
+	padding: 9px 15px;
+	border-radius: 20px;
+}
+
+.row{
+	display: flex;
+
+}
+
+.register{
+	padding: 30px;
+	flex-basis: 50%;
+	max-width: 500px;
+}
+
+.register img{
+	width: 200px;
+}
+
+.login{
+	padding: 30px;
+}
+
+footer{
+	margin-top: 40px;
+	background-color: #F0FFFF;
+}
+
+footer h5{
+	font-size: 25px; 
+	margin-bottom: 10px;
+}
+
+footer ul{
+	list-style: none;
+	padding: 0;
+	float: left;
+	margin-right: 20px;
+}
+
+footer h5{
+	text-decoration:underline;
+}
+
+footer ul li{
+	color: black;
+}
+
+footer a{
+	color: black;
+}

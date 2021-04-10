@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container" style="margin: 10%;">
+    <h1>Shopping Cart</h1>
+    {{msg}}
+    <hr>
+    {% if data|length==0 %}
+    <p class="text-center" style="margin: 15%;">Your Cart is empty right now. <a href="/new_season">Click here to Shop for products</a></p>
+    {% else %}
+    {% for row in data%}
+    <div class="media border p-3">
+        <img src="{{url_for('static', filename='images/' + row[2])}}" alt="pd-1" class="rounded-circle" style="width:100px;">
+        <div class="media-body">
+          <h4>{{row[1]}}</h4>
+          <small>${{row[3]}}</small>
+          <div>
+              <a href="/removefromcart?C_ID={{row[0]}}"><button class="btn btn-danger">Delete</button></a>
+          </div>      
+        </div>
+    </div>
+    {% endfor %}
+      <div class="mr-auto">
+        <h3>Total Price: HK$ {{totalPrice}}</h3>
+      </div>
+    <hr>
+    <form action="http://127.0.0.1:5000/checkout" method="post">
+      <div>
+        <input type="hidden" value="{{now}}" id="date" name="date">
+        <input type="hidden" value="{{totalPrice}}" id="totalprice" name="totalprice">
+      </div>
+      <button class="btn btn-outline-dark" type="submit">Checkout</button>
+    </form>
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand " href="/"><img src="{{url_for('static', filename='images/logo.png')}}" style="width: 50px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarCollapse">
+    {% if not session['loggedin'] %}
+    <ul class="navbar-nav navbar-right ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="/new_season">New Season Item</a></li> 
+        <li class="nav-item active"><a class="nav-link" href="/men">Men</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/women">Women</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/kids">Kids</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/login">Log In</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/adminlogin">Admin</a></li>
+    </ul>
+    {% else %}
+    <ul class="navbar-nav navbar-right ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="/new_season">New Season Item</a></li> 
+        <li class="nav-item active"><a class="nav-link" href="/men">Men</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/women">Women</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/kids">Kids</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/user">User</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/logout">Logout</a></li>
+        <li class="nav-item active"><a href="/shoppingcart"><img src="{{url_for('static', filename='images/cart.jpg')}}" style="width: 50px;"></i></a></li>
+    </ul>
+    {% endif %}
+    </div>
+</nav>

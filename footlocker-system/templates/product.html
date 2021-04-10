@@ -1,0 +1,62 @@
+<style>
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+    }
+    .container{
+        margin: 10%;
+    }
+</style>
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <img src="{{url_for('static', filename='images/' + data[5])}}" alt="">
+        </div>
+        <form action="http://127.0.0.1:5000/addtocart" method="POST" class="col-6">
+            <div class="col-6">
+                <div>
+                    <h3>{{data[2]}}</h3>
+                    <input type="hidden" name="product_id" id="product_id" value="{{data[0]}}">
+                </div>
+                <div>
+                    <h4>HK${{data[3]}}</h4>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Size:</label>
+                    <select class="form-control" id="size" name="size">
+                    {% if data[1]=='men'%}
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                    {% elif data[1]== 'women' %}
+                        <option>36</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                    {% elif data[1]== 'men' %}    
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    {% else %}    
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                    {% endif %}    
+                    </select>
+                </div>
+                <div>
+                    <button class="btn btn-light" type="submit">Add To Cart</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

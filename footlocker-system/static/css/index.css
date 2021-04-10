@@ -1,0 +1,16 @@
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bg-1{
+    margin: 5%;
+}

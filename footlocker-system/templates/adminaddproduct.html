@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/adminadd.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'admin_layout.html' %}
+{% block title %}Add Products{% endblock %}
+{% block body %}
+	<section class="addproduct">
+		<div class="container">
+			<div class="col-md-10">
+                <a href="/adminproduct"><i class="far fa-arrow-alt-circle-left fa-3x"></a></i>
+				<h1 class="text-center">Add Products</h1>
+                <br>
+                <p>{{msg}}</p>
+                <br>
+			</div>	
+			<div class="col-md-8 offset-md-3 form">
+                <form action="http://127.0.0.1:5000/admin_add" method="POST">
+                    <div class="form-group">
+                        <label>Item Type:</label>
+                        <input class="form-control" style="color: #919191a4;" id="itemtype" name="itemtype" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Item:</label>
+                        <input class="form-control" style="color: #919191a4;" id="item" name="item" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price:</label>
+                        <input class="form-control" style="color: #919191a4;" id="price" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">Size:</label>
+                        <select class="form-control" id="size" name="size">
+                            <option>40,41,42,43</option>
+                            <option>36,37,38,39</option>
+                            <option>28,29,30,31</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Image:</label>
+                        <input type="file" class="form-control" style="color: #919191a4;" id="price" name="price" required>
+                    </div>
+                    <button class="btn btn-sub" type="submit">Submit</button>
+                </form>
+            </div>
+		</div>
+	</section>
+{% endblock %}	
