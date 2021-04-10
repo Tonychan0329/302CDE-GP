@@ -1,0 +1,97 @@
+:root {
+    --main-color: #027581;
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+}
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.sidebar .fa-user{
+    color: #919191a4;
+    box-sizing: content-box;
+    margin: auto 80px auto;
+}
+
+.sidebar {
+    top: 100px;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem;
+} 
+
+.sidebar-menu {
+    padding: 3rem;
+    list-style: none;
+}
+
+.sidebar-menu .but{
+    width: 180px;
+    height: 35px;
+    background-color:#919191a4;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.sidebar-menu .logout{
+    background-color:#050505;
+    border-radius: 12px;
+    width: 130px;
+    height: 35px;
+    margin: auto 30px auto;
+}
+
+
+.sidebar li {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar a{
+    color: #fff;
+    font-size: 1rem;
+}
+
+.sidebar a span:last-child  {
+    padding-left: .5rem;
+}
+
+.social-icons{
+    display: inline-block;
+    color: #919191a4;
+    font-size: 28px;
+    margin: auto 13px auto;
+}
+
+.main-content {
+    position: relative;
+    margin-left: 200px;
+    height: 100%;
+}
+
+
+main {
+    position: relative;
+    padding: 5rem;
+    justify-content: space-between;
+}

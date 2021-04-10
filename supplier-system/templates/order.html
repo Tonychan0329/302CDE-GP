@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/order.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'supplier_layout.html' %}
+{% block title %}Order{% endblock %}
+{% block body %}
+	<section class="order">
+		<div class="container">
+			<div class="col-md-12">
+				<h1>Order</h1>
+                <hr/>
+				<br>
+			</div>	
+			<div class="col-md-8 offset-md-3 form">
+                <form class="form-inline" action=http://localhost:5000/order method="POST">
+                    <input style="width: 400px" class="form-control mr-sm-2" type="text" name="order_id" placeholder="Search">
+                    <button class="btn btn-search" type="submit">Search</button>
+					<a href="/order" style="font-size: 20px;">Clear</a>
+                </form>
+            </br>
+			</div>
+				<div class="col-md-12">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr style="color: #919191a4;">
+								<th>Order ID</th>
+								<th>Retailer</th>
+								<th>Date</th>
+								<th>Approved Status</th>
+								<th>Order Status</th>
+								<th>Edit</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in data%}
+							<tr>
+								<td>{{row[0]}}</td>
+								<td>{{row[1]}}</td>
+								<td>{{row[2]}}</td>
+								<td>{{row[3]}}</td>
+								<td>{{row[4]}}</td>
+								<td><button class="btn btn-edit"><a href="/update?order_id={{row[0]}}">Edit</a></button></td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+		</div>
+	</section>
+{% endblock %}	

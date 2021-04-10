@@ -1,0 +1,61 @@
+/*  navbar  */
+.center {
+    text-align: center;
+    margin: 100px auto auto;
+}
+
+.center p{
+    display: inline;
+}
+
+/*   update and complet page table    */
+
+.table{
+    margin: 100px 250px auto;
+}
+
+/*  update email page  */
+
+.update_email{
+    margin: 100px 450px auto;
+}
+
+input{
+    width: 250px;
+    height: 30px;
+}
+
+textarea{
+    width: 500px;
+    height: 150px;
+}
+
+
+
+/*   all button   */
+
+button{
+    background-color:#050505;
+    color: white;
+    width: 130px;
+    height: 38px;
+}
+
+button a{
+    color: white;
+}
+
+.back{
+    margin: 100px 390px auto;
+}
+.next{
+    margin: 100px auto auto;
+}
+
+.send{
+    margin: 50px 180px auto;
+}
+
+.finish{
+    margin: 100px 630px auto;
+}

@@ -1,0 +1,20 @@
+h4,form{
+    margin: 50px 570px auto;
+}
+
+.fa-user-circle{
+    color:#919191a4;
+    margin: 300px 650px auto;
+}
+
+.but_login{
+    background-color:#919191a4;
+    border-radius: 5px;
+    width: 130px;
+    height: 35px;
+    margin: auto 70px auto;
+}
+
+button a{
+    color: white;
+}

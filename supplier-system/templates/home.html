@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+{% extends 'supplier_layout.html' %}
+{% block title %}Admin Management System{% endblock %}
+{% block body %}
+	<section class="home">
+		<div class="title">
+            <h1>Admin Management System</h1>
+            <p>Search order ID to tracking the order states</p>
+        </div>
+
+        <div class="search">
+            <form class="form-inline">
+                <i class="fas fa-search"></i>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-search" type="submit">Search</button>
+            </form>
+        </div>
+
+	</section>
+{% endblock %}	

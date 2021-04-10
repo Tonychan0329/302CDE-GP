@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/order.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'supplier_layout.html' %}
+{% block title %}Inventory{% endblock %}
+{% block body %}
+	<section class="order">
+		<div class="container">
+			<div class="col-md-12">
+				<h1>Inventory</h1>
+                <hr/>
+				<br>
+			</div>	
+			<div class="col-md-8 offset-md-3 form">
+                <form class="form-inline" action=http://localhost:5000/inventory method="POST">
+                    <input style="width: 400px" class="form-control mr-sm-2" type="text" name="item_no" placeholder="Search">
+                    <button class="btn btn-search" type="submit">Search</button>
+					<a href="/inventory" style="font-size: 20px;">Clear</a>
+                </form>
+            </br>
+			</div>
+				<div class="col-md-12">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr style="color: #919191a4;">
+								<th>Item No.</th>
+								<th>Item Type</th>
+								<th>Item Name</th>
+								<th>Price</th>
+								<th>Size</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in data%}
+							<tr>
+								<td>{{row[0]}}</td>
+								<td>{{row[1]}}</td>
+								<td>{{row[2]}}</td>
+								<td>{{row[3]}}</td>
+								<td>{{row[4]}}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+		</div>
+	</section>
+{% endblock %}	

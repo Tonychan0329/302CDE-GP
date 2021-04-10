@@ -1,0 +1,37 @@
+.order h1{
+    color: #919191a4;
+}
+
+form{
+    margin: 20px -10px auto;
+}
+
+form .btn-search{
+    background-color:#050505;
+    color: white;
+    width: 130px;
+    height: 38px;
+    margin: auto -10px auto;
+}
+
+form a {
+    color: #919191cc;
+    margin: auto 30px auto;
+}
+
+.table{
+    margin: 50px 10px auto;
+}
+
+.table-invoice{
+    width: 700px;
+    margin: 100px 200px auto;
+}
+
+.order .btn-edit{
+    background-color:#fcff68;
+}
+
+.order .btn-edit a{
+    color:#050505;
+}

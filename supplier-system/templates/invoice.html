@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/order.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'supplier_layout.html' %}
+{% block title %}Invoice{% endblock %}
+{% block body %}
+	<section class="order">
+		<div class="container">
+			<div class="col-md-12">
+				<h1>Invoice</h1>
+				<button class="btn btn-invoice"><a href="invoice_content">Invoice Content</a></button>
+                <hr/>
+				<br>
+			</div>
+            
+                <div class="table-invoice">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th>Replenishment ID</th>
+								<th>Shop</th>
+								<th>Print Invoice</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in data%}
+							<tr>
+								<td>{{row[0]}}</td>
+								<td>{{row[1]}}</td>
+								<td><button class="btn btn-print"><a href="/invoice_content?id={{row[0]}}">Print</a></button></td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+                </div>
+		</div>
+	</section>
+{% endblock %}	

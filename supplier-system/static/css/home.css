@@ -1,0 +1,36 @@
+.home{
+    position: relative;
+    margin-left: 200px;
+    height: 100%;
+}
+
+.home .title{
+    margin: 200px 30px auto;
+    align-items: center;
+}
+
+.home h1{
+    font-size: 60px;
+}
+
+.home p{
+    color: #919191a4;
+    font-size: 15px;
+    margin: auto 200px auto;
+}
+
+.home .search{
+    margin: 100px 250px auto;
+}
+
+.search .fa-search{
+    color: #919191a4;
+}
+
+.search .btn-search{
+    background-color:#050505;
+    color: white;
+    width: 130px;
+    height: 38px;
+    margin: auto -10px auto;
+}

@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/update.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'update_layout.html' %}
+{% block title %}Inventory{% endblock %}
+{% block body %}
+<body>
+    <section class="update_email">
+		<div class="col-md-24">
+            <form class="email">
+                <div class="form-group">
+                    <input style="color: #919191a4;" value="First Name">
+                    <input style="color: #919191a4;" value="Last Name">
+                </div>
+                <br>
+                <div class="form-group">
+                    <input style="color: #919191a4;" value="Email">
+                    <input style="color: #919191a4;" value="Subjet">
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea style="color: #919191a4;" class="pb-cmnt-textarea" placeholder="Write your comment here!"></textarea>
+                </div>
+                <div>
+                    <button class="but send"><a href="/update_complet">Send</a></button>
+                </div>		
+            </form>
+        </div>
+	</section>
+</body>
+{% endblock %}	

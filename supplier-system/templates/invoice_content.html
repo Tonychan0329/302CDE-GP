@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/invoice_content.css') }}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<title>Invoice Content</title>
+
+<div class="col-lg-12">
+    <a href="invoice"><i class="far fa-arrow-alt-circle-left fa-3x"></i></a>
+</div>
+
+<div class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 padding">
+    <div class="card">
+        <div class="card-header p-4">
+            <a class="pt-2 d-inline-block" href="index.html" data-abc="true">Supplier.com</a>
+            <div class="float-right">
+                {% for row in data%}
+                <h3 class="mb-0">Invoice {{row[0]}}</h3>
+                Date: {{row[5]}}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-sm-6">
+                    <h5 class="mb-3">From:</h5>
+                    <h3 class="text-dark mb-1">Supplier Admin</h3>
+                    <div>2410, 2/F, Li Dak Sum Yip Yio Chin Academic Building</div>
+                    <div>City University of HK, Kowloon, HK</div>
+                    <div>Email: supplier@gmail.com</div>
+                    <div>Phone: 852 xxxx xxxx</div>
+                </div>
+                <div class="col-sm-6 ">
+                    <h5 class="mb-3">To:</h5>
+                    <h3 class="text-dark mb-1">Footlocker</h3>
+                    <div>478, Nai Sadak</div>
+                    <div>Chandni chowk, New delhi, 110006</div>
+                    <div>Email: retailer@outlook.com</div>
+                    <div>Phone: 852 xxxx xxxx</div>
+                </div>
+            </div>
+            <div class="table-responsive-sm">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="center">#</th>
+                            <th>Item</th>
+                            <th>Type</th>
+                            <th class="right">Price</th>
+                            <th class="center">Qty</th>
+                            <th class="right">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in data%}
+                        <tr>
+                            <td class="center">1</td>
+                            <td class="left strong">{{row[1]}}</td>
+                            <td class="left">{{row[2]}}</td>
+                            <td class="right">{{row[6]}}</td>
+                            <td class="right">{{row[3]}}</td>
+                            <td class="right">HK${{totalPrice}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-sm-5">
+                </div>
+                <div class="col-lg-4 col-sm-5 ml-auto">
+                    <table class="table table-clear">
+                        <tbody>
+                            <tr>
+                                <td class="left">
+                                    <strong class="text-dark">Total</strong> </td>
+                                <td class="right">
+                                    <strong class="text-dark">HK${{totalPrice}}</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-white">
+            <p class="mb-0">Supplier.com <br> LI CityU HK, 2/F Rm2410</p>
+        </div>
+    </div>
+</div>

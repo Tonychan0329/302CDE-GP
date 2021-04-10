@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/update.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'update_layout.html' %}
+{% block title %}Inventory{% endblock %}
+{% block body %}
+<body>
+    <section class="update">
+        <div class="col-md-8">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Retailer</th>
+                        <th>Date</th>
+                        <th>Approved Status</th>
+                        <th>Order Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in order%}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                        <td>{{row[4]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+        </div>
+
+        <div>
+            <button class="but back"><a href="/order">Back</a></button>
+            <button class="but next"><a href="/update_email">Next</a></button>
+        </div>
+	</section>
+</body>
+{% endblock %}	
