@@ -6,20 +6,20 @@
     <div class="collapse navbar-collapse " id="navbarCollapse">
     {% if not session['loggedin'] %}
     <ul class="navbar-nav navbar-right ml-auto">
-        <li class="nav-item active"><a class="nav-link" href="/new_season">New Season Item</a></li> 
-        <li class="nav-item active"><a class="nav-link" href="/men">Men</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/women">Women</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/kids">Kids</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/login">Log In</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/new_season">EXCLUSIVE ITEM</a></li> 
+        <li class="nav-item active"><a class="nav-link" href="/men">MEN</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/women">WOMEN</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/kids">KIDS</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/login">Login</a></li>
         <li class="nav-item active"><a class="nav-link" href="/adminlogin">Admin</a></li>
     </ul>
     {% else %}
     <ul class="navbar-nav navbar-right ml-auto">
-        <li class="nav-item active"><a class="nav-link" href="/new_season">New Season Item</a></li> 
-        <li class="nav-item active"><a class="nav-link" href="/men">Men</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/women">Women</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/kids">Kids</a></li>
-        <li class="nav-item active"><a class="nav-link" href="/user">User</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/new_season">EXCLUSIVE ITEM</a></li> 
+        <li class="nav-item active"><a class="nav-link" href="/men">MEN</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/women">WOMEN</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/kids">KIDS</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/user">ACCOUNT</a></li>
         <li class="nav-item active"><a class="nav-link" href="/logout">Logout</a></li>
         <li class="nav-item active"><a href="/shoppingcart"><img src="{{url_for('static', filename='images/cart.jpg')}}" style="width: 50px;"></i></a></li>
     </ul>
